@@ -158,5 +158,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
+// add set remind that you must pick a certain time    
+
+    const dateInput = document.getElementById('date');
+    const timeInput = document.getElementById('time');
+    const timeContainer = document.getElementById('time-container');
+
+    function updateTimeLimits() {
+        const selectedDate = new Date(dateInput.value);
+        const day = selectedDate.getDay(); // 6 = Sunday, 5 = Saturday
+
+        if (isNaN(day)) return;
+
+        // Show the time input when a valid date is selected
+        timeContainer.style.display = 'block';
+
+        if (day === 5 || day === 6) {
+        // Weekend: 8:00 AM to 8:00 PM
+        timeInput.min = "08:00";
+        timeInput.max = "20:00";
+        } else {
+        // Weekday: 4:00 PM to 10:00 PM
+        timeInput.min = "16:00";
+        timeInput.max = "22:00";
+        }
+
+        // Reset time input if out of range
+        if (timeInput.value && (timeInput.value < timeInput.min || timeInput.value > timeInput.max)) {
+        //alert(`Selected time is not valid for this day. Please choose a time between ${timeInput.min} and ${timeInput.max}.`);
+        alert('This time is outside of our operating hours: Weekdays 4pm-Sunset and Weekends Sunrise-Sunset')
+        timeInput.value = '';
+        }
+    }
+
+    dateInput.addEventListener('change', updateTimeLimits);
+
+    timeInput.addEventListener('input', function () {
+        if (timeInput.value < timeInput.min || timeInput.value > timeInput.max) {
+        //alert(`Please select a time between ${timeInput.min} and ${timeInput.max}.`);
+        alert('This time is outside of our operating hours: Weekdays 4pm-Sunset and Weekends Sunrise-Sunset');
+        timeInput.value = '';
+        }
+    });
+
+
+
 });
 
