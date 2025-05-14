@@ -1012,3 +1012,75 @@ footer {
     margin-top: 20px;
     border-radius: 8px;
 }
+/* Additional CSS for Membership Page */
+
+/* Price span sizing for monthly text */
+.pricing-price span {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Membership section specific styles */
+.membership .feature-item {
+    text-align: left;
+    padding: 25px;
+}
+
+.membership .pricing-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership .pricing-features {
+    flex-grow: 1;
+}
+
+/* Visual enhancements for membership tiers */
+.membership .pricing-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Additional responsive design */
+@media (max-width: 768px) {
+    .membership .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .membership .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional CSS fixes for Membership Page */
+
+/* Fix for footer positioning on page transitions */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#home-page, #pricing-page, #about-page, #membership-page {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Ensure content pages have proper spacing */
+.page-header {
+    margin-bottom: 30px;
+}
+
+/* Enhance membership section appearance */
+.membership {
+    padding-bottom: 60px;
+}
+
+/* Add some space above footer */
+.footer-grid {
+    margin-top: 20px;
+}
