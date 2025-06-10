@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('show');
     });
-
+/*
     // Date and time handling for booking
     const dateInput = document.getElementById('date');
     const timeInput = document.getElementById('time');
@@ -135,4 +135,5 @@ document.addEventListener('DOMContentLoaded', function() {
         timeInput.value = '';
         }
     });
+    */
 });
