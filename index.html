@@ -19,6 +19,9 @@
         gtag('config', 'G-0NW7H47BJY'); 
     
     </script>
+    <!-- Setmore Booking Widget -->
+    <script id='setmore_script' type='text/javascript' src='https://assets.setmore.com/integration/static/setmoreIframeLive.js'></script>
+
 
     <meta charset="UTF-8">
 
@@ -206,103 +209,16 @@
                 <div class="booking-grid">
 
                     <div class="booking-form">
-
-                        <form action="https://formspree.io/f/mrbpzjbb" method="POST">
-
-                            <div class="form-group">
-
-                                <label for="name">Full Name</label>
-
-                                <input type="text" id="name" name="name" class="form-control" required>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="email">Email Address</label>
-
-                                <input type="email" id="email" name="email" class="form-control" required>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="phone">Phone Number</label>
-
-                                <input type="tel" id="phone" name="phone" class="form-control" required>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="date">Preferred Date</label>
-
-                                <input type="date" id="date" name="date" class="form-control" required>
-
-                            </div>
-
-                          <!--  <div class="form-group">
-
-                                 Time input, initially hidden 
-                                    <div id="time-container" style="display: none; margin-top: 10px;">
-
-                                    <input type="time" id="time" name="time" class="form-control" required step="1800">
-                                    </div>    
-                            
-                            </div>
-                         -->
-
-                            <div class="form-group">
-                                <!-- This is where the Time input is. If we want to go back to limiting the time and date inputs then you must uncomment the 
-                                above code -->
-                                <label for="time">Preferred Time</label>
-                                <input type="time" id="time" name="time" class="form-control" required step="1800">
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="service">Service Package</label>
-
-                                <select id="service" name="service" class="form-control" required>
-
-                                    <option value="">Select a package</option>
-
-                                    <option value="tier 1">Dust Off - $49.99</option>
-
-                                    <option value="tier 2">Texas Touch Up - $99.99</option>
-
-                                    <option value="tier 3">Lone Star Luxury - $149.99</option>
-
-                                </select>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="address">Service Address</label>
-
-                                <input type="text" id="address" name="address" class="form-control" required>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label for="notes">Special Instructions</label>
-
-                                <textarea id="notes" name="notes" class="form-control" rows="3"></textarea>
-
-                            </div>
-
-                            <!-- Optional hidden fields -->
-
-                            <input type="hidden" name="_subject" value="New Booking Request">
-
-                            <input type="hidden" name="_next" value="https://pearlsnapdetailing.com/">
-
-                            <button type="submit" class="btn">Book Now</button>
-
-                        </form>
-
+                        <h3>Book Your Car Wash</h3>
+                        <p style="margin-bottom: 20px;">Click the button below to schedule your appointment through our booking system.</p>
+                        
+                        <a style='display: inline-block; text-decoration: none;' id='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                            <img border='none' src='https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg' alt='Book Now with Setmore' style='width: 200px; height: auto;' />
+                        </a>
+                        
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            You'll be redirected to our secure booking system where you can select your service, date, and time.
+                        </p>
                     </div>
 
                     <div class="booking-content">
@@ -560,7 +476,9 @@
 
                         </ul>
 
-                        <a href="#" class="btn pricing-btn">Book Now</a>
+                        <a style='display: inline-block; text-decoration: none;' class='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                            <div class="btn pricing-btn" style="margin: 20px auto 30px; width: 80%; display: block;">Book Now</div>
+                        </a>
 
                     </div>
 
@@ -592,7 +510,9 @@
 
                         </ul>
 
-                        <a href="#" class="btn pricing-btn">Book Now</a>
+                        <a style='display: inline-block; text-decoration: none;' class='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                            <div class="btn pricing-btn" style="margin: 20px auto 30px; width: 80%; display: block;">Book Now</div>
+                        </a>
 
                     </div>
 
@@ -626,7 +546,9 @@
 
                         </ul>
 
-                        <a href="#" class="btn pricing-btn">Book Now</a>
+                        <a style='display: inline-block; text-decoration: none;' class='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                            <div class="btn pricing-btn" style="margin: 20px auto 30px; width: 80%; display: block;">Book Now</div>
+                        </a>
 
                     </div>
 
@@ -723,7 +645,9 @@
 
                     <h3 style="margin-bottom: 20px;">Ready to book your service?</h3>
 
-                    <a href="#" class="btn">Book Now</a>
+                    <a style='display: inline-block; text-decoration: none;' class='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                        <div class="btn">Book Now</div>
+                    </a>
 
                 </div>
 
@@ -791,7 +715,9 @@
 
                         </ul>
 
-                        <a href="#" class="btn">Book Our Services</a>
+                        <a style='display: inline-block; text-decoration: none;' class='Setmore_button_iframe' href='https://pearlsnapmobiledetailingkijn.setmore.com'>
+                            <div class="btn">Book Our Services</div>
+                        </a>
 
                     </div>
 

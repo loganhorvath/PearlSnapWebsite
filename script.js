@@ -78,15 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add event listeners for booking buttons in the pricing page
-    const pricingButtons = document.querySelectorAll('.pricing-btn');
-    pricingButtons.forEach(function(button) {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPage(homePage);
-            // Scroll to booking section
-            document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
-        });
-    });
+    //const pricingButtons = document.querySelectorAll('.pricing-btn');
+    const pricingButtons = document.querySelectorAll('.Setmore_button_iframe');
+    // pricingButtons.forEach(function(button) {
+    //     button.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         showPage(homePage);
+    //         // Scroll to booking section
+    //         document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+    //     });
+    // });
     
     // Initialize mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu');
@@ -95,45 +96,5 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('show');
     });
-/*
-    // Date and time handling for booking
-    const dateInput = document.getElementById('date');
-    const timeInput = document.getElementById('time');
-    const timeContainer = document.getElementById('time-container');
 
-    function updateTimeLimits() {
-        const selectedDate = new Date(dateInput.value);
-        const day = selectedDate.getDay(); // 6 = Sunday, 5 = Saturday
-
-        if (isNaN(day)) return;
-
-        // Show the time input when a valid date is selected
-        timeContainer.style.display = 'block';
-
-        if (day === 5 || day === 6) {
-        // Weekend: 8:00 AM to 8:00 PM
-        timeInput.min = "08:00";
-        timeInput.max = "20:00";
-        } else {
-        // Weekday: 4:00 PM to 10:00 PM
-        timeInput.min = "16:00";
-        timeInput.max = "22:00";
-        }
-
-        // Reset time input if out of range
-        if (timeInput.value && (timeInput.value < timeInput.min || timeInput.value > timeInput.max)) {
-        alert('This time is outside of our operating hours: Weekdays 4pm-Sunset and Weekends Sunrise-Sunset')
-        timeInput.value = '';
-        }
-    }
-
-    dateInput.addEventListener('change', updateTimeLimits);
-
-    timeInput.addEventListener('input', function () {
-        if (timeInput.value < timeInput.min || timeInput.value > timeInput.max) {
-        alert('This time is outside of our operating hours: Weekdays 4pm-Sunset and Weekends Sunrise-Sunset');
-        timeInput.value = '';
-        }
-    });
-    */
 });
